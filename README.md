@@ -23,7 +23,7 @@ thru the RPC API, Peer-to-peer protocol and will even read its raw .dat files fo
 Configure bitmarkd to listen to RPC calls and set `txindex` to true.
 The easiest way to do this is by copying `./etc/bitmarkd/bitmark.conf` to your
 bitmark data directory (usually `"~/.bitmark"` on Linux, `"%appdata%\Bitmark\"` on Windows,
-or `"~/Library/Application Support/Bitcoin"` on Mac OS X).
+or `"~/Library/Application Support/Bitmark"` on Mac OS X).
 
 bitmarkd must be running and must have finished downloading the blockchain **before** running *insight API*.
 
