@@ -67,7 +67,15 @@ module.exports = function(app) {
     app.get(apiPrefix + '/email/retrieve/:email', emailPlugin.oldRetrieve);
 
     app.post(apiPrefix + '/email/delete/profile', emailPlugin.eraseProfile);
-    app.post(apiPrefix + '/email/delete/item/:key', emailPlugin.erase);
+    app.get(apiPrefix + '/email/delete/item', emailPlugin.erase);
+
+    app.get(apiPrefix + '/email/resend_email', emailPlugin.resendEmail);
+  }
+
+  // Currency rates plugin
+  if (config.enableCurrencyRates) {
+    var currencyRatesPlugin = require('../plugins/currencyrates');
+    app.get(apiPrefix + '/rates/:code', currencyRatesPlugin.getRate);
   }
 
   // Address routes
