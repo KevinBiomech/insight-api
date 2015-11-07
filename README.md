@@ -7,25 +7,25 @@ This is a backend-only service. If you're looking for the web frontend applicati
 take a look at https://github.com/bitpay/insight.
 
 *Insight API* allows to develop bitcoin-related applications (such as wallets) that 
-require certain information from the blockchain that bitcoind does not provide.
+require certain information from the blockchain that gamecreditsd does not provide.
 
 A blockchain explorer front-end has been developed on top of *Insight API*. It can
-be downloaded at [Github Insight Repository](https://github.com/bitpay/insight).
+be downloaded at [Github Insight Repository](https://github.com/KevinBiomech/insight_gmc).
 
 
 ## Prerequisites
 
-* **bitmarkd** - Download and Install [Bitcoin](http://bitmark.org/en/download)
+* **gamecreditsd** - Download and Install [Bitcoin](http://bitmark.org/en/download)
 
-*insight API* needs a *trusted* bitmarkd node to run. *insight API* will connect to the node
+*insight API* needs a *trusted* gamecreditsd node to run. *insight API* will connect to the node
 thru the RPC API, Peer-to-peer protocol and will even read its raw .dat files for syncing.
 
-Configure bitmarkd to listen to RPC calls and set `txindex` to true.
-The easiest way to do this is by copying `./etc/bitmarkd/bitmark.conf` to your
-bitmark data directory (usually `"~/.bitmark"` on Linux, `"%appdata%\Bitmark\"` on Windows,
-or `"~/Library/Application Support/Bitmark"` on Mac OS X).
+Configure gamecreditsd to listen to RPC calls and set `txindex` to true.
+The easiest way to do this is by copying `./etc/gamecreditsd/gamecredits.conf` to your
+bitmark data directory (usually `"~/.gamecredits"` on Linux, `"%appdata%\gamecredits\"` on Windows,
+or `"~/Library/Application Support/gamecredits"` on Mac OS X).
 
-bitmarkd must be running and must have finished downloading the blockchain **before** running *insight API*.
+gamecreditsd must be running and must have finished downloading the blockchain **before** running *insight API*.
 
 
 * **Node.js v0.10.x** - Download and Install [Node.js](http://www.nodejs.org/download/).
@@ -37,7 +37,7 @@ bitmarkd must be running and must have finished downloading the blockchain **bef
 
   To install Insight API, clone the main repository:
 
-    $ git clone https://github.com/bitpay/insight-api && cd insight-api
+    $ git clone https://github.com/KevinBiomech/insight-api && cd insight-api
 
   Install dependencies:
 
